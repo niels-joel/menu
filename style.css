@@ -1,0 +1,66 @@
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 3.1fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Bovenbalk Bovenbalk Bovenbalk"
+    "Tekst Menu Menu-Lite"
+    "Copyright Copyright Copyright";
+}
+
+.Bovenbalk { grid-area: Bovenbalk; }
+
+.Menu-Lite { grid-area: Menu-Lite; }
+
+.Menu { grid-area: Menu; }
+
+.Tekst { grid-area: Tekst; }
+
+.Copyright { grid-area: Copyright; }
+
+
+/* css style */
+
+body {
+	background-color: #FFFFFF;
+	
+}
+
+
+.Bovenbalk {
+	background-color: #F1F1F1;
+	border: 1px solid #000000;
+}
+
+
+
+#title {
+	font-size: 40px;
+}
+
+#bovenbalktekst {
+	text-align: center;
+	font-size: 40px;
+	position: fixed;
+	top: 10;
+	width: 100%;
+}
+
+#logo {
+	float: left;
+	padding-right: 10px;
+	position: relative;
+	z-index: 1;
+	
+}
+
+.Copyright {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	
+}
+
+
