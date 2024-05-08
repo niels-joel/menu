@@ -4,10 +4,24 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "Bovenbalk Bovenbalk Bovenbalk"
+    "Bovenkant Bovenkant Bovenkant"
     "Tekst Menu Menu-Lite"
     "Copyright Copyright Copyright";
 }
+
+.Bovenkant {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Titel Bovenbalk Bovenbalk"
+    "Titel Bovenbalk Bovenbalk"
+    "Titel Bovenbalk Bovenbalk";
+  grid-area: Bovenkant;
+}
+
+.Titel { grid-area: Titel; }
 
 .Bovenbalk { grid-area: Bovenbalk; }
 
@@ -20,6 +34,8 @@
 .Copyright { grid-area: Copyright; }
 
 
+
+
 /* css style */
 
 body {
@@ -28,9 +44,15 @@ body {
 }
 
 
-.Bovenbalk {
+.Bovenkant {
 	background-color: #F1F1F1;
 	border: 1px solid #000000;
+}
+
+.Bovenbalk {
+	text-align: fixed;
+	margin-left: 10%;
+	width: 100%;
 }
 
 
@@ -40,16 +62,13 @@ body {
 }
 
 #bovenbalktekst {
-	text-align: center;
 	font-size: 40px;
-	position: fixed;
-	top: 10;
-	width: 100%;
 }
 
 #logo {
 	float: left;
 	padding-right: 10px;
+	padding-left: 10px;
 	position: relative;
 	z-index: 1;
 	
@@ -62,5 +81,4 @@ body {
 	text-align: center;
 	
 }
-
 
